@@ -3,7 +3,6 @@
 THEME='bgrt-grub-theme'
 
 # Pre-authorise sudo
-sudo echo
 
 # Detect existence of BGRT
 if [[ ! -r /sys/firmware/acpi/bgrt/image ]]; then
@@ -50,12 +49,9 @@ echo "    top  = $(</sys/firmware/acpi/bgrt/yoffset)" >> ./theme/theme.txt
 echo '    file = "bgrt.png"' >> ./theme/theme.txt
 echo '}' >> ./theme/theme.txt
 
-echo 'Creating GRUB themes directory'
-sudo mkdir -p /boot/${GRUB_DIR}/themes/${THEME}
-
 echo 'Copying theme to GRUB themes directory'
-sudo cp -r ./theme/* $1
+cp -r ./theme/* $1
 
 echo 'Cleaning up temporary files...'
-sudo rm ./theme/theme.txt
-sudo rm ./theme/bgrt.png
+rm ./theme/theme.txt
+rm ./theme/bgrt.png
