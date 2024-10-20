@@ -51,7 +51,3 @@ echo '}' >> ./theme/theme.txt
 
 echo 'Copying theme to GRUB themes directory'
 cp -r ./theme/* $1
-
-echo 'Cleaning up temporary files...'
-rm ./theme/theme.txt
-rm ./theme/bgrt.png
