@@ -39,7 +39,7 @@ then
 fi
 
 echo 'Loading BGRT image'
-sudo "$MAGICK" /sys/firmware/acpi/bgrt/image PNG24:./theme/bgrt.png
+"$MAGICK" /sys/firmware/acpi/bgrt/image PNG24:./theme/bgrt.png
 
 cp ./theme.txt ./theme/theme.txt
 echo '' >> ./theme/theme.txt
